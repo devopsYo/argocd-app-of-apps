@@ -5,6 +5,7 @@ metadata:
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-options: CreateNamespace=true
+    argocd.argoproj.io/sync-options: ServerSideApply=true
 spec:
   project: default
   source:
