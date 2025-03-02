@@ -11,5 +11,5 @@ spec:
     path: "cmdo-apps"
   destination:
     server: "https://kubernetes.default.svc"
-    namespace: "tigera-operator"
+    namespace: "default"
   syncPolicy: {}
