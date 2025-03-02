@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: project-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: "https://github.com/devopsYo/argocd-app-of-apps.git"
+    targetRevision: "HEAD"
+    path: "projects"
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: "default"
+  syncPolicy: {}

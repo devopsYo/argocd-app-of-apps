@@ -1,0 +1,12 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: cmdo-project
+  namespace: argocd
+spec:
+  description: "Project to manage applications"
+  sourceRepos:
+  - '*'
+  destinations:
+  - namespace: '*'
+    server: '*'

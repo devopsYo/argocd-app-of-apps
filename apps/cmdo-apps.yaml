@@ -1,15 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: arc-app
+  name: cmdo-apps
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: "https://github.com/devopsYo/arc.git"
+    repoURL: "https://github.com/devopsYo/argocd-app-of-apps.git"
     targetRevision: "HEAD"
-    path: "arc"
+    path: "cmdo-apps"
   destination:
     server: "https://kubernetes.default.svc"
-    namespace: "arc-systems"
+    namespace: "tigera-operator"
   syncPolicy: {}
