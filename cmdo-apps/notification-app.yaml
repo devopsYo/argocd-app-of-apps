@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: notification-app
+  namespace: argocd
+spec:
+  project: cmdo-project
+  source:
+    repoURL: "https://github.com/devopsYo/argocd-config.git"
+    targetRevision: "HEAD"
+    path: "notifications"
+    helm:
+      valueFiles:
+        - env/dev-values.yaml
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: "cmdo-argocd-notifications"
+  syncPolicy: {}
