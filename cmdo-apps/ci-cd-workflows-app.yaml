@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ci-cd-workflows-app
+  name: ci-cd-workflows
   namespace: argocd
 spec:
   project: cmdo-project

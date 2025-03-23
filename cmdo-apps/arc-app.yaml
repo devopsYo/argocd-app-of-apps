@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: arc-app
+  name: arc
   namespace: argocd
 spec:
   project: cmdo-project
