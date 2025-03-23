@@ -6,7 +6,7 @@ metadata:
 spec:
   project: cmdo-project
   source:
-    repoURL: "https://github.com/devopsYo/arc.git"
+    repoURL: "https://github.com/devopsYo/argo-workflows.git"
     targetRevision: "HEAD"
     path: "."
   destination:
