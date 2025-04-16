@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: istio
+  name: istio-poc
   namespace: argocd
 spec:
   project: cmdo-project
   source:
     repoURL: "https://github.com/devopsYo/istio.git"
     targetRevision: "HEAD"
-    path: "."
+    path: "istio-poc"
   destination:
     server: "https://kubernetes.default.svc"
     namespace: "cmdo-istio"
