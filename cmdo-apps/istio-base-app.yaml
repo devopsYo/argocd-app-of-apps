@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: istio-base
+  namespace: argocd
+spec:
+  project: cmdo-project
+  source:
+    repoURL: "https://github.com/devopsYo/istio.git"
+    targetRevision: "HEAD"
+    path: "istio-base"
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: "istio-system"
+  syncPolicy: {}
