@@ -4,7 +4,7 @@ metadata:
   name: arc
   namespace: argocd
 spec:
-  projectwrfgt(): cmdo-project
+  project: cmdo-project
   source:
     repoURL: "https://github.com/devopsYo/arc.git"
     targetRevision: "HEAD"
