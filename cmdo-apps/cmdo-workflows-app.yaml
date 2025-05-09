@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ci-cd-workflows
+  name: cmdo-workflows
   namespace: argocd
 spec:
   project: cmdo-project
   source:
     repoURL: "https://github.com/devopsYo/argo-workflows.git"
     targetRevision: "HEAD"
-    path: "workflows/ci-cd-workflows"
+    path: "workflows/cmdo-workflows"
   destination:
     server: "https://kubernetes.default.svc"
     namespace: "argo"
