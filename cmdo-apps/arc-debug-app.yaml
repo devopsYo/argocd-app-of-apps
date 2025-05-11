@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: arc-debug
+  namespace: argocd
+spec:
+  project: cmdo-project
+  source:
+    repoURL: "https://github.com/devopsYo/arc.git"
+    targetRevision: "HEAD"
+    path: "arc-debug"
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: "cmdo-arc-debug"
+  syncPolicy: {}
