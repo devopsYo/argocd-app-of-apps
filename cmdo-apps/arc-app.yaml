@@ -1,15 +1,15 @@
-#apiVersion: argoproj.io/v1alpha1
-#kind: Application
-#metadata:
-#  name: arc
-#  namespace: argocd
-#spec:
-#  project: cmdo-project
-#  source:
-#    repoURL: "https://github.com/devopsYo/arc.git"
-#    targetRevision: "HEAD"
-#    path: "arc"
-#  destination:
-#    server: "https://kubernetes.default.svc"
-#    namespace: "cmdo-arc-systems"
-#  syncPolicy: {}
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: arc
+  namespace: argocd
+spec:
+  project: cmdo-project
+  source:
+    repoURL: "https://github.com/devopsYo/arc.git"
+    targetRevision: "HEAD"
+    path: "arc"
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: "cmdo-arc-systems"
+  syncPolicy: {}
