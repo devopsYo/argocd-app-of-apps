@@ -1,18 +1,18 @@
-#apiVersion: argoproj.io/v1alpha1
-#kind: Application
-#metadata:
-#  name: arc-runner-set-enterprise
-#  namespace: argocd
-#spec:
-#  project: cmdo-project
-#  source:
-#    repoURL: "https://github.com/devopsYo/arc.git"
-#    targetRevision: "HEAD"
-#    path: "arc-runner-set"
-#    helm:
-#      valueFiles:
-#        - env/dev/enterprise-values.yaml
-#  destination:
-#    server: "https://kubernetes.default.svc"
-#    namespace: "cmdo-arc-runners-enterprise"
-#  syncPolicy: {}
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: arc-runner-set-enterprise
+  namespace: argocd
+spec:
+  project: cmdo-project
+  source:
+    repoURL: "https://github.com/devopsYo/arc.git"
+    targetRevision: "HEAD"
+    path: "arc-runner-set"
+    helm:
+      valueFiles:
+        - env/dev/enterprise-values.yaml
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: "cmdo-arc-runners-enterprise"
+  syncPolicy: {}
