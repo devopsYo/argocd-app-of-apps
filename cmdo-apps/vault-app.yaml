@@ -11,5 +11,5 @@ spec:
     path: "."
   destination:
     server: "https://kubernetes.default.svc"
-    namespace: "cmdo-vault"
+    namespace: "vault"
   syncPolicy: {}
